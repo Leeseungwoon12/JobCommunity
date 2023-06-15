@@ -28,7 +28,7 @@ module.exports = async (req, res, next) => {
     next();
   } catch (err) {
     res.clearCookie("authorization"); //인증에 실패 할 경우 쿠키 삭제
-    console.error(error);
+    console.error(err);
     res
       .status(401)
       .json({ errMessage: "로그인 후에 사용할 수 있는 기능입니다." });
