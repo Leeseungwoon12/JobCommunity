@@ -44,7 +44,7 @@ module.exports = {
 
       if (isExistEmail) {
         return res
-          .status(401)
+          .status(400)
           .json({ errMessage: "이미 존재하는 이메일입니다." });
       }
 
